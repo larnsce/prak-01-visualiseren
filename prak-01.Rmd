@@ -1,11 +1,8 @@
 ---
 title: "Daten visualisieren"
-name: "Lars Schöbitz"
-date: "2020-02-02"
-output: 
-  html_document: 
-    toc: true
-    toc_float: true
+name: ""
+date: ""
+output: html_document
 ---
 
 # Dein Zug 0
@@ -14,9 +11,6 @@ output:
 - Nenne den Code-chunk "setup"
 - Lade die {tidyverse} R packages mit der `library()` Funktion
 - Lade das {palmerpenguins} R package 
-
-
-
 
 # Dein Zug 1
 
@@ -38,6 +32,7 @@ output:
 - Nutze das {ggplot2} Cheatsheet (Tipp: `Help -> Cheatsheets`) oder mach eine Vermutung
 - Füge die Farbe aus dem vorherigen Plot wieder hinzu 
 - Ersetze die Variable "species" mit der Variablen "island"
+- Führe den Code aus
 - Beschreibe den Plot
 
 **Lösch diesen Text und beschreibe hier was du siehst**
@@ -53,6 +48,7 @@ ggplot(data = penguins,
 
 # Dein Zug 3
 
+- Führe den Code aus
 - Beschreibe was die Funktion `geom_jitter()` und das Argument 'width = 0.2' machen
 - **Tipp**: Führe `?geom_jitter` in der Console aus um die Help Seite aufzurufen und mehr über die Argumente zu erfahren 
 
@@ -71,6 +67,7 @@ ggplot(data = penguins,
 
 - Erstelle einen Bar Plot 
 - Bilde die Farbe mit der Variable "species" ab (**Tipp:** Nutze die Help Seite für `geom_bar()`)
+- Führe den Code aus
 - Beschreibe was du gelernt hast
 
 **Lösch diesen Text und beschreibe hier was du gelernt hast**
@@ -83,31 +80,18 @@ ggplot(data = penguins,
 
 ```
 
-# Dein Zug 5 
-
-- Was stimmt mit dem folgenden Plot nicht? Warum sind die Punkte nicht blau?
-
-```{r}
-
-ggplot(data = penguins, 
-       mapping = aes(x = bill_depth_mm, 
-                     y = bill_length_mm, 
-                     color = "blue")) +
-  geom_point()
-```
-
-# Zug 6
+# Dein Zug 5
 
 - Füge deinen Namen und das Datum zum YAML Header hinzu (**Tipp:** Zwischen die drei gestrichelten Linien)
-- Kopiere den Text in folgendem Code-chunk und füge auch diesen zum YAML Header hinzu
+- Kopiere den Text in folgendem Code-chunk und füge auch diesen zum YAML Header hinzu (**Tipp:** Überschreibe 'output: html_document')
 - Klicke auf `Knit` und betrachte dein fertiges Dokument
 
 ```{r, eval=FALSE}
 
 output: 
   html_document: 
-  toc: true
-toc_float: true
+    toc: true
+    toc_float: true
 
 ```
 
