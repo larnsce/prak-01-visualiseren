@@ -95,4 +95,4 @@ output:
 
 ```
 
-Super gemacht! Wir sind fertig hier. `r emo::ji("flexed_biceps")`
+Super gemacht! Wir sind fertig hier. 
