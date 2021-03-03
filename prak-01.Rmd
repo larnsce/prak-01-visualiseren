@@ -46,13 +46,14 @@ In dieser ersten Übung arbeiten wir mit einem Datensatz über Pinguine auf drei
 Die Funktion `geom_point()` in Übung 2 bestimmt welches Aussehen ein Plot hat. 
 
 1. Führe den Code aus
-2. Ersetze den folgenden Scatterplot durch einen, der Boxplots zeichnet (**Tipp:** In der Symbolleiste der RStudio IDE gehe auf "Help -> Cheatsheets" und öffne das Cheatsheet für ggplot2)
+2. Ersetze den folgenden Scatterplot durch einen, der Boxplots zeichnet (**Tipp:** In der Symbolleiste der RStudio IDE gehe auf "Help -> Cheatsheets" und öffne das Cheatsheet für das "ggplot2" R Package)
 3. Führe den Code aus
-4. Ordne die Variable "species" der visuellen Eigenschaft "color" zu (**Tipp:** Schau was du im vorherigen Plot gemacht hast) 
+4. Ordne die Variable "species" dem Argument 'color' zu (**Tipp:** Schau was du im vorherigen Plot gemacht hast) 
 5. Führe den Code aus
-6. Ordne nun die Variable "island" der visuellen Eigeschaft "color" zu Ersetze die Variable "species" mit der Variablen "island" 
+6. Ordne nun die Variable "island" dem Argument 'color' zu
 7. Führe den Code aus
-8. Beschreibe was du gelernt hast.
+8. Beschreibe was du gelernt hast
+
 
 **Lösch diesen Text und beschreibe hier was du siehst**
 
