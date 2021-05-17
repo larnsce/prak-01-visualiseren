@@ -1,6 +1,6 @@
 ---
 title: "Daten visualisieren"
-name: ""
+author: ""
 date: ""
 output: html_document
 ---
@@ -22,7 +22,7 @@ In dieser ersten Übung arbeiten wir mit einem Datensatz über Pinguine auf drei
 
 1. Füge einen neuen Code-chunk hinzu (**Tipp: Das grüne C in der Symbolleiste**)
 2. In deinem neuen Code-chunk, nutze die Funktion `library()` um das "ggplot2" R package zu laden
-3. Lade auch das "palmerpenguins" R package 
+3. Lade auch das "palmerpenguins" R package mit der Funktion `library()`
 4. Führe den Code aus (**Tipp:** Play button im Code-chunk)
 
 **Füge hier einen Code-chunk hinzu**
@@ -45,8 +45,8 @@ In dieser ersten Übung arbeiten wir mit einem Datensatz über Pinguine auf drei
 
 Die Funktion `geom_point()` in Übung 2 bestimmt welches Aussehen ein Plot hat. 
 
-1. Führe den Code aus
-2. Ersetze den folgenden Scatterplot durch einen, der Boxplots zeichnet (**Tipp:** In der Symbolleiste der RStudio IDE gehe auf "Help -> Cheatsheets" und öffne das Cheatsheet für das "ggplot2" R Package)
+1. Führe den Code aus im Code-chunk mit dem Namen `penguins-vis-box` aus
+2. Ersetze das illustrierte Streudiagramm (en: scatterplot) durch einen Boxplot. Nutze dazu die Funktion `geom_boxplot()` anstatt `geom_point()` 
 3. Führe den Code aus
 4. Ordne die Variable "species" dem Argument 'color' zu (**Tipp:** Schau was du im vorherigen Plot gemacht hast) 
 5. Führe den Code aus
@@ -86,7 +86,7 @@ ggplot(data = penguins,
 # Übung 5
 
 1. Führe den Code aus
-2. Erstelle einen Bar Plot (**Tipp:** Gehe zurück zu Übung 3 und schau nach wie du einen Boxplot erstellt hast. Was könnte hier fehlen?)
+2. Erstelle einen Bar Plot mit der Funktion `geom_bar()` (**Tipp:** Gehe zurück zu Übung 3 und schau nach wie du einen Boxplot erstellt hast. Was könnte hier fehlen?)
 3. Führe den Code aus
 4. Warum wurde das Argument 'color' durch 'fill' ersetzt? (**Tipp:** Probiere aus das Argument 'fill' wieder durch 'color' zu ersetzen)
 
