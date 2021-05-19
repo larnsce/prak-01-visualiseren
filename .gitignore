@@ -54,3 +54,7 @@ po/*~
 # Renviron
 
 *.Renviron
+
+
+# Files
+*.DS_Store
