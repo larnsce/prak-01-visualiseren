@@ -44,9 +44,6 @@ docs/
 # translation temp files
 po/*~
 
-# Solutions files
-*-solutions.Rmd
-*-solutions.html
 
 # ignore _files folder
 *_files
