@@ -15,75 +15,78 @@ In dieser ersten Übung arbeiten wir mit einem Datensatz über Pinguine auf drei
 - *bill_depth_mm:* eine Zahl, die die Tiefe des Schnabels angibt (in Millimetern)
 - *flipper_length_mm:* eine Zahl, die die Flipperlänge angibt (Millimeter)
 - *body_mass_g:* eine ganze Zahl, die die Körpermasse (Gramm) angibt
-- *sex:* ein Faktor, der das Geschlecht des Pinguins angibt (female, male)
+- *sex:* ein Faktor, der das Geschlecht des Pinguins angibt (`female`, `male`)
 - *year:* eine Zahl, die das Studienjahr angibt (2007, 2008 oder 2009)
 
-# Übung 1
+# Übungen
 
-1. Füge einen neuen Code-chunk hinzu (**Tipp: Das grüne C in der Symbolleiste**)
-2. In deinem neuen Code-chunk, nutze die Funktion `library()` um das "ggplot2" R package zu laden
-3. Lade auch das "palmerpenguins" R package 
-4. Führe den Code aus (**Tipp:** Play button im Code-chunk)
+Folgend sind sechs Übungen vorbereitet. Diese beinhalten teilweise R Code, welchen ich bereits für dich vorbereitet habe.
 
-**Füge hier einen Code-chunk hinzu**
+## Übung 1
+
+1. Füge einen neuen Code-chunk hinzu (**Tipp: Das grüne `C` in der Symbolleiste**)
+2. In deinem neuen Code-chunk, schreibe `library(ggplot2)` ohne die Backticks (` `) um das "ggplot2" R package zu laden.
+3. Auf einer neuen Zeile im gleichen Code-chunk lade auch das "palmerpenguins" R package mit der Funktion `library()`.
+4. Führe den Code aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
 
 ```{r}
 library(ggplot2)
 library(palmerpenguins)
 ```
 
-# Übung 2
+## Übung 2
 
-1. Gehe zurück zu Praktikum 0, und kopiere den Code aus dem letzten Code-chunk mit dem Titel `penguins-vis`
-2. Füge den kopierten Code hier in dem Code-chunk mit dem Titel `penguin-vis-point` wieder ein
-3. Kommentiere den Code aus indem du die # löscht 
-4. Führe den Code aus 
-5. Beschreibe den Plot
+Für die folgende Übung habe ich Code aus dem letzten Code-chunk in Praktikum 0 kopiert und hier eingefügt. 
 
-**Lösch diesen Text und beschreibe hier was du siehst**
+1. Kommentiere den Code aus indem du die `#` löscht. 
+2. Führe den Code aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+3. Beschreibe den Plot: Was aus dem Code erkennst du in der Visualisierung wieder? Was lässt sich aus der Visualisierung lesen? 
 
-```{r penguins-vis-point}
+```{r penguins-vis}
 
-ggplot(data = penguins,
-       mapping = aes(x = bill_depth_mm,
-                     y = bill_length_mm,
+ggplot(data = penguins, 
+       mapping = aes(x = bill_depth_mm, 
+                     y = bill_length_mm, 
                      color = species)) +
   geom_point()
 
-
 ```
 
-# Übung 3
+## Übung 3
 
-Die Funktion `geom_point()` in Übung 2 bestimmt welches Aussehen ein Plot hat. 
+Die Funktion `geom_point()` in Übung 2 bestimmt, welches Aussehen ein Plot hat. Es wurde ein Streudiagramm (en: scatterplot) dargestellt mit den Variablen `bill_depth_mm` auf der x-Achse und `bill_length_mm` auf der y-Achse. Zusätzlich wurde die Variable `species` einer visuellen Eigenschaft (Farbe) zugeordnet. 
 
-1. Führe den Code aus
-2. Ersetze den folgenden Scatterplot durch einen, der Boxplots zeichnet (**Tipp:** In der Symbolleiste der RStudio IDE gehe auf "Help -> Cheatsheets" und öffne das Cheatsheet für das "ggplot2" R Package)
-3. Führe den Code aus
-4. Ordne die Variable "species" dem Argument 'color' zu (**Tipp:** Schau was du im vorherigen Plot gemacht hast) 
-5. Führe den Code aus
-6. Ordne nun die Variable "island" dem Argument 'color' zu
-7. Führe den Code aus
+1. Führe den Code im folgenden Code-chunk mit dem Namen `penguins-vis-box` aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+
+2. Ersetze das illustrierte Streudiagramm (en: scatterplot) durch einen Boxplot. Nutze dazu die Funktion `geom_boxplot()` anstatt `geom_point()`.
+
+3. Führe den Code aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+
+4. Ordne die Variable `species` einer visuellen Eigenschaft zu. Nutze das Argument `color` für die Zuweisung on Farben. (**Tipp:** Schau was im vorherigen Plot gemacht wurde)
+
+5. Führe den Code aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+
+6. Ersetze nun die Variable `species` durch die Variable `island`. 
+
+7. Führe den Code aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+
 8. Beschreibe was du gelernt hast
 
-**Lösch diesen Text und beschreibe hier was du gelernt hast**
 
 ```{r penguins-vis-box}
 
 ggplot(data = penguins, 
        mapping = aes(x = species, 
-                     y = bill_length_mm)) +
-  geom_point()
+                     y = bill_length_mm,
+                     color = island)) +
+  geom_boxplot()
 
 ```
 
-# Übung 4
+## Übung 4
 
-1. Führe den Code aus
-2. Beschreibe was die Funktion `geom_jitter()` und das Argument 'width = 0.2' machen
-3. **Tipp**: Führe `?geom_jitter` in der Console aus um die Help Seite aufzurufen und mehr über die Funktion und ihre Argumente zu erfahren 
-
-**Lösch diesen Text und beschreibe hier was du siehst**
+1. Führe den Code im folgenden Code-chunk mit dem Namen `penguins-vis-3` aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+2. Beschreibe was die Funktion `geom_jitter()` und das Argument `width = 0.2` machen. **Tipp**: Ändere den Wert von `0.2` auf `0.8` oder andere Werte. 
 
 ```{r penguins-vis-3}
 
@@ -94,26 +97,30 @@ ggplot(data = penguins,
 
 ```
 
-# Übung 5
+## Übung 5
 
-1. Führe den Code aus
-2. Erstelle einen Bar Plot (**Tipp:** Gehe zurück zu Übung 3 und schau nach wie du einen Boxplot erstellt hast. Was könnte hier fehlen?)
-3. Führe den Code aus
-4. Warum wurde das Argument 'color' durch 'fill' ersetzt? (**Tipp:** Probiere aus das Argument 'fill' wieder durch 'color' zu ersetzen)
+1. Führe den Code im folgenden Code-chunk mit dem Namen `penguins-vis-4` aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
 
-**Lösch diesen Text und beschreibe hier was du gelernt hast**
+2. Erstelle einen Bar Plot mit der Funktion `geom_bar()` (**Tipp:** Gehe zurück zu Übung 3 und schau nach, wie du einen Boxplot erstellt hast. Was könnte hier in diesem Code fehlen?)
 
-```{r penguin-vis4}
+3. Führe den Code aus, indem du auf den grünen Play Button oben rechts im Code-chunk klickst. 
+
+4. Warum habe ich hier das Argument `color` durch `fill` ersetzt? (**Tipp:** Probiere aus das Argument `fill` wieder durch `color` zu ersetzen)
+
+
+```{r penguin-vis-4}
 
 ggplot(data = penguins, 
        mapping = aes(x = island,
-                     fill = species)) 
+                     fill = species)) +
+  geom_bar()
 
 ```
 
-# Übung 6
+## Übung 6
 
-- Füge deinen Namen und das Datum zum YAML Header hinzu (**Tipp:** Zwischen die drei gestrichelten Linien)
-- Klicke auf `Knit` und betrachte dein fertiges Dokument
+1. Füge deinen Namen und das Datum zum YAML Header hinzu (**Tipp:** Zwischen die drei gestrichelten Linien).
+
+2. Klicke auf `Knit` und betrachte dein fertiges Dokument.
 
 Super gemacht! Wir sind fertig hier. 
